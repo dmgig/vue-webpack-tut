@@ -26,6 +26,18 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.styl(us)?$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      },
+      {
+        test: /\.js$/,
+        use: 'babel-loader'
       }
     ]
   },
