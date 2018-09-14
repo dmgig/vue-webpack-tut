@@ -66,6 +66,10 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+        test: /trumbowyg\.min\.js$/,
+        loader: 'imports-loader?jQuery=jquery,$=jquery,this=>window'
       }
     ]
   },
