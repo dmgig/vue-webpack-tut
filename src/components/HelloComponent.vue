@@ -1,5 +1,19 @@
 <template>
-  <h1>Hello {{ name }}!</h1>
+  <div>
+    <h1>Hello {{ name }}!</h1>
+    <div class="">
+      <div class="">
+        <input class="form-control" type="input" name="test" />
+      </div>
+      <div class="">
+
+      </div>
+      <textarea class="form-control"></textarea>
+      <div class="">
+
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 export default {
