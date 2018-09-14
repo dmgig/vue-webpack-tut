@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <hello-component name="World" />
+    <hello-component name="Test" />
   </div>
 </template>
 <script>

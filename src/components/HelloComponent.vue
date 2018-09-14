@@ -11,7 +11,7 @@
       <div class="alert alert-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet nibh eget elit convallis accumsan sed a eros. Vivamus malesuada faucibus magna eget tempor. Duis molestie elit et erat rutrum condimentum. Nulla ut ipsum id arcu egestas efficitur. Integer auctor massa id fermentum vulputate. Nam eget ornare mauris, vitae malesuada purus.
       </div>
-      <textarea id="editor" data-placeholder="Go on, start editing..." class="form-control">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet nibh eget elit convallis accumsan sed a eros. Vivamus malesuada faucibus magna eget tempor. Duis molestie elit et erat rutrum condimentum. Nulla ut ipsum id arcu egestas efficitur. Integer auctor massa id fermentum vulputate. Nam eget ornare mauris, vitae malesuada purus.</textarea>
+      <textarea data-placeholder="Go on, start editing..." class="editor form-control">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet nibh eget elit convallis accumsan sed a eros. Vivamus malesuada faucibus magna eget tempor. Duis molestie elit et erat rutrum condimentum. Nulla ut ipsum id arcu egestas efficitur. Integer auctor massa id fermentum vulputate. Nam eget ornare mauris, vitae malesuada purus.</textarea>
       <div class="alert alert-light">
         This is a light alert—check it out!
       </div>
@@ -21,7 +21,7 @@
 <script>
 export default {
   mounted: function () {
-    $('#editor').trumbowyg({
+    $('.editor').trumbowyg({
         btns: ['strong', 'em', '|'],
         autogrow: true
     });
