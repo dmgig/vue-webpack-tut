@@ -1,8 +1,11 @@
 <template>
   <div class="container">
-    <h1>{{ name }}</h1>
+    <h1>Timeline: {{ timeline.title }}</h1>
+    <div class="alert alert-light">
+      Entries count: {{ timeline.entries.length }}
+    </div>
     <hr />
-    <div v-for="entry in entries">
+    <div v-for="entry in timeline.entries">
       <entry-component :entry="entry" />
     </div>
   </div>
@@ -14,12 +17,8 @@ export default {
     EntryComponent
   },
   props: {
-    name: {
-      type: String,
-      required: true
-    },
-    entries: {
-      type: Array
+    timeline: {
+      type: Object
     }
   }
 }

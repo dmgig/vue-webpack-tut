@@ -4,7 +4,6 @@ const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'development',
-
   entry: [
     './src/app.js'
   ],
@@ -40,6 +39,13 @@ module.exports = {
         use: 'babel-loader'
       },
       {
+          test: /\.svg/,
+          use: {
+              loader: 'svg-url-loader',
+              options: {}
+          }
+      },
+      {
         test: /\.(scss)$/,
         use: [
           {
@@ -68,7 +74,7 @@ module.exports = {
         ]
       },
       {
-        test: /trumbowyg\.min\.js$/,
+        test: /trumbowyg\.js$/,
         loader: 'imports-loader?jQuery=jquery,$=jquery,this=>window'
       }
     ]

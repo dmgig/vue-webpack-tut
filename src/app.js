@@ -1,23 +1,29 @@
+// js
 import * as jQuery from 'jquery';
 window.$ = jQuery;
 import 'bootstrap';
-import 'trumbowyg/dist/trumbowyg.min.js'
-$.trumbowyg.svgPath = '/node_modules/trumbowyg/dist/ui/icons.svg';
+
+// css
+import "bootstrap/scss/bootstrap.scss";
+import '../assets/app.css'
+
+// Vue
 import Vue from 'vue'
 import App from './App.vue'
 
-import "bootstrap/scss/bootstrap.scss";
-import 'trumbowyg/dist/ui/trumbowyg.min.css'
-import '../assets/app.css'
+import VueTrumbowyg from 'vue-trumbowyg';
+import 'trumbowyg/dist/ui/trumbowyg.css';
+$.trumbowyg.svgPath = '/node_modules/trumbowyg/dist/ui/icons.svg';
+Vue.use(VueTrumbowyg);
 
-import entries from '../data-test/o-bosch.json'
+// data
+import timeline from '../data-test/o-bosch.json'
 
 new Vue({
   el: '#app',
   render: h => h(App, {
     props: {
-      name: 'O. Bo',
-      entries: entries
+      timeline: timeline
     }
   })
 })
