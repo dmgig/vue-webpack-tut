@@ -12,11 +12,12 @@
       </div>
       <trumbowyg v-model="entry.display" v-on:input="saveEntry" :config="config" class="form-control" name="display"></trumbowyg>
       <div class="entry__toolbar">
-        <div>
-          <label for="hide" class="form-control">
-            Hide from display: <input v-model="entry.hide" name="hide" type="checkbox" />
-          </label>
-        </div>
+        <label for="monthOnly" class="form-control">
+          Date month only: <input v-model="entry.monthOnly" name="monthOnly" type="checkbox" />
+        </label>
+        <label for="hide" class="form-control">
+          Hide from display: <input v-model="entry.hide" name="hide" type="checkbox" />
+        </label>
       </div>
       <div class="alert alert-light">
         hash: {{ entry.hash }}
@@ -68,4 +69,5 @@ input[name=date]
   width 160px
 .entry__toolbar
   display flex
+  flex-align column
 </style>
