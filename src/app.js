@@ -10,7 +10,14 @@ import "bootstrap/scss/bootstrap.scss";
 import 'trumbowyg/dist/ui/trumbowyg.min.css'
 import '../assets/app.css'
 
+import entries from '../data-test/o-bosch.json'
+
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App, {
+    props: {
+      name: 'O. Bo',
+      entries: entries
+    }
+  })
 })

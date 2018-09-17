@@ -1,14 +1,26 @@
 <template>
   <div class="container">
-    <hello-component name="World" />
-    <hello-component name="Test" />
+    <h1>{{ name }}</h1>
+    <hr />
+    <div v-for="entry in entries">
+      <entry-component :entry="entry" />
+    </div>
   </div>
 </template>
 <script>
-import HelloComponent from './components/HelloComponent.vue'
+import EntryComponent from './components/EntryComponent.vue'
 export default {
   components: {
-    HelloComponent
+    EntryComponent
+  },
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+    entries: {
+      type: Array
+    }
   }
 }
 </script>
