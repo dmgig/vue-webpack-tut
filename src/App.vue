@@ -1,11 +1,14 @@
 <template>
   <div class="container">
-    <h1>Timeline: {{ timeline.title }}</h1>
+    <div class="header">
+      <h1>Timeline: {{ timeline.title }}</h1>
+      <button v-on:click="downloadJson" class="download-json btn btn-md btn-info pull-right" type="button">DOWNLOAD</button>
+    </div>
     <div class="alert alert-light">
       Entries count: {{ timeline.entries.length }}
     </div>
     <div class="">
-      <button v-on:click="downloadJson" class="download-json btn btn-lg btn-info" type="button">DOWNLOAD</button>
+
     </div>
     <hr />
     <div v-for="entry in timeline.entries">
@@ -42,3 +45,10 @@ export default {
   }
 }
 </script>
+<style lang="stylus" scoped>
+h1
+  display inline-block
+.header
+  display flex
+  justify-content space-between
+</style>
